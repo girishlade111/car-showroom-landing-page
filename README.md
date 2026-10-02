@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Showroom Landing Page
 
-## Getting Started
+A sleek, modern landing page for a car showroom / dealership, built with Next.js.
+Hero banner with featured models, featured-cars showcase, services section,
+contact section, and a full footer — with dark/light theme support, smooth
+Framer Motion animations, and a rich shadcn/ui component kit.
 
-First, run the development server:
+## Features
+
+- **Hero section** — bold headline banner with calls-to-action
+- **Featured cars** — car showcase cards (image, specs, pricing)
+- **Services section** — dealership services overview
+- **Contact section** — enquiry/contact form and contact details
+- **Footer** — full sitemap footer with social links
+- **Theming** — dark/light mode via `next-themes`
+- **Animations** — Framer Motion scroll and micro-interactions
+- **UI kit** — shadcn/ui primitives (button, card, dialog, accordion, carousel,
+  form, tabs, chart, and more) plus Lucide icons
+- **Static export ready** — `output: "export"` in `next.config.ts` for hosting on
+  GitHub Pages
+
+## Tech stack
+
+- **Next.js 15** (App Router) + **React 19** + TypeScript
+- **Tailwind CSS 4** + shadcn/ui (Radix primitives)
+- **Framer Motion**, **Lucide React**, **Swiper**, **Recharts**, **React Three Fiber**
+  (available in the kit)
+
+> Note: `stripe`, `better-auth`, `@libsql/client`, and `drizzle-orm` appear in
+> `package.json` as unused dependencies inherited from the starter template —
+> the landing page itself is fully static and calls no backend.
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # static export -> out/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/            # App Router: layout.tsx, page.tsx, globals.css
+  components/     # HeroSection, FeaturedCars, ServicesSection, ContactSection, Footer
+  components/ui/  # shadcn/ui primitives
+  hooks/          # use-mobile
+  lib/            # utils, hooks
+  visual-edits/   # visual-editor instrumentation (dev only)
+public/           # static assets
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+Deployed as a static export on GitHub Pages:
+https://girishlade111.github.io/car-showroom-landing-page/
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build      # produces out/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by Girish Lade — https://ladestack.in
